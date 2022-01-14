@@ -33,7 +33,7 @@ public class EmployeePayrollService {
 	
 	public void writeEmployeePayrollData(IOService ioService) {
 		if(ioService.equals(IOService.CONSOLE_IO))
-			System.out.println("\nWriting Employee Payroll Roster to Console\n" + employeePayrollList);
+			System.out.println("\nWriting Employee Payroll  to Console\n" + employeePayrollList);
 		
 		else if(ioService.equals(IOService.FILE_IO))
 			new EmployeePayrollFileIOService().writeData(employeePayrollList);
@@ -65,7 +65,7 @@ public class EmployeePayrollService {
 	
 	public static void main(String[] args) {
 		
-		System.out.println("---------- Welcome To Employee Payroll Application ----------\n");
+		System.out.println("Welcome To Employee Payroll Application");
 		ArrayList<EmployeePayrollData> employeePayrollList  = new ArrayList<EmployeePayrollData>();
 		EmployeePayrollService employeePayrollService = new EmployeePayrollService(employeePayrollList);
 		Scanner consoleInputReader = new Scanner(System.in);
